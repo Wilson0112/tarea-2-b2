@@ -6,24 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página hospital</title>
     <link rel="stylesheet" href="estilosPagina/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-    <section class="menu1">
-        <button>iniciar sesion</button>
-    </section>
+    <div class="menu1">
+        <form action="#">
+            <select class="inicio" name="sesion" id="iniciar">
+                <option value="iniciar">Iniciar Sesion</option>
+                <option value="iniciar">Vincular cuentas</option>
+            </select>
+        </form>
+
+        <i id="lupa" class="fa-solid fa-magnifying-glass"></i>
+        <i id="cookies" class="fa-solid fa-a"></i>
+        <i id="cosas" class="fa-thin fa-a"></i>
+    </div>
     
     <div class="contenedor">
 
         <div class="menu2">
             <header>
                 <nav>
+                    <section class="logo">
+                        <img src="multimedia/logo3jpg.jpg" alt="logo">
+                        <h2><a href="#">Hospital Nuestra Familia</a></h2>
+                    </section>
                     <ul class="opciones">
-                        <div class="logo">
-                            <img src="multimedia/logo3jpg.jpg" alt="logo">
-                            <li><a href="">Hospital Nuestra Familia</a></li>
-                        </div>
                         <li class="item"><a class="link" href="#">Nosotros</a></li>
                         <li class="item"><a class="link" href="#">Servicios</a></li>
                         <li class="item"><a class="link" href="#">Contacto</a></li>
@@ -32,34 +42,55 @@
             </header>
         </div>
 
-       <section class="banner">
+       <div class="banner">
         <img class="publicidad" src="multimedia/medicina.jpg" alt="medicina">
-       </section>
+       </div>
 
        <section class="registro">
         <h2>Registro paciente</h2>
-        <form action="">
+        <form class="formulario" action="#">
 
-            <label for="ci">Cédula:
-                <input type="text" name="ci" id="ci">
-            </label>
+          <label class="titulo" for="ci">Cédula:</label>
+          <input class="entrada" type="number" id="ci" name="cedula">
 
-            <label for="direc">Dirección:
-                <input type="text" name="direc" id="direc">  <br>
-            </label>
+          <label class="titulo" for="direc">Dirección:</label>
+          <input class="entrada" type="text" id="direc" name="Dirección"> <br>
 
-            <label for="nom">Nombres:
-                <input type="text" name="nom" id="nom">
-            </label>
+          <label class="titulo" for="nom">Nombres:</label>
+          <input class="entrada" type="text" id="nom" name="Nombres">
 
-            
-            <label for="nom">Ciudad de Residencia:
-                <input type="text" name="nom" id="nom">
-            </label>
+          <label class="titulo" for="resi">Ciudad de Residencia:</label>
+          <input class="entrada" type="text" id="resi" name="Residencia"><br>
 
+          <label class="titulo" for="ape">Apellidos:</label>
+          <input class="entrada" type="text" name="Apellidos" id="ape">
 
+          <label class="titulo" for="date">Fecha de Nacimiento:</label>
+          <input class="entrada" type="date" name="Fecha" id="date"> <br>
+
+          <label class="titulo" for="email">Email:</label>
+          <input class="entrada" type="email" name="correo" id="email"> 
+
+          <label class="titulo" for="gender">Genero:</label>
+
+          <select class="selector" name="Genero" id="gender">
+            <option class="opcion" value="Genero">--</option>
+            <option value="Genero">Masculino</option>
+            <option value="Genero">Femenino</option>
+            <option value="Genero">No binario</option>
+          </select> <br>
+
+          <label class="titulo" for="numero">Teléfono:</label>
+          <input class="entrada" type="number" name="Teléfono" id="numero"> 
+
+          <input  class="entrada"  type="reset" value="Cancelar">
+          <input  class="entrada"  type="submit" value="Registrar">
         </form>
        </section>
     </div>
+
+    <footer>
+        <pre class="sub">Accesibilidad |  Copyrigth |  <pre class="subrayado">Declaración de privacidad</pre>  | <pre class="subrayado">Términos de Uso</pre> </pre>
+    </footer>
 </body>
 </html>
